@@ -6,9 +6,12 @@
 <script src="bower_components/metisMenu/dist/metisMenu.min.js"></script>
 
 <!-- Morris Charts JavaScript -->
-<script src="bower_components/raphael/raphael-min.js"></script>
+<!-- <script src="bower_components/raphael/raphael-min.js"></script>
 <script src="bower_components/morrisjs/morris.min.js"></script>
-<script src="js/morris-data.js"></script>
+<script src="js/morris-data.js"></script> -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
 
 <!-- Custom Theme JavaScript -->
 <script src="dist/js/sb-admin-2.js"></script>

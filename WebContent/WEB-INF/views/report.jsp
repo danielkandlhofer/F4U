@@ -8,6 +8,7 @@
 
 <html lang="en">
 <head>
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css">
 <jsp:include page="includes/head.jsp"></jsp:include>
 </head>
 <body>
@@ -180,16 +181,55 @@
 		    		</div> 
 		  		</div>
 		  	</div>
-		  
+						<p id="value1" />${cats[0].name}
+						<p id="value2" />${cats[1].name}
+						<p id="value3" />${cats[2].name}
+		          <!-- charts -->
+    <div id="myfirstchart" style="width:600px;height:300px">	
         </div>
         	
         <!-- /#page-wrapper -->
 
     </div>
+
     <!-- /#wrapper -->
     
-<!-- java scripts -->
 
 <jsp:include page="includes/scripts.jsp"></jsp:include>
+    
+<!-- java scripts -->
+<script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+<script src="http://cdn.oesmith.co.uk/morris-0.4.1.min.js"></script>
+  
+<script type="text/javascript">
+new Morris.Line({
+  // ID of the element in which to draw the chart.
+  element: 'myfirstchart',
+  
+  // Chart data records -- each entry in this array corresponds to a point on
+  // the chart.
+   /* data: [
+    { category: 'shopping', value: $(document.getElementById("value1")).value()},
+    { category: 'test', value: $(document.getElementById("value2")).value()},
+    { category: 'hulahula', value: $(document.getElementById("value3")).value()}
+  ],   */
+  data: [
+         { year: '2008', value: 20 },
+         { year: '2009', value: 10 },
+         { year: '2010', value: 5 },
+       ],
+
+  // The name of the data record attribute that contains x-values.
+  xkey: 'year',
+  // A list of names of data record attributes that contain y-values.
+  ykeys: ['value'],
+  // Labels for the ykeys -- will be displayed when you hover over the
+  // chart.
+  labels: ['year','value']
+});
+</script>
+
+<!-- java scripts -->
 </body>
 </html>
